@@ -5,5 +5,5 @@ The threeD package can be installed using the following commands in R:
 
 ```
 install.packages("devtools");
-devtools::install_github("AndreasFischer/threeD");
+devtools::install_github("AndreasFischer1985/threeD");
 ```
