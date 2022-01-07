@@ -1,7 +1,7 @@
 #' Function plotPoints
 #' 
 #' @export
-plotPoints <- function (rver, tver, add = F, col1 = "lightgrey", col2 = "black", 
+plotPoints <- function (tver, add = F, col1 = "lightgrey", col2 = "black", 
     subset = NULL, lim = NULL) 
 {
     if (is.null(lim)) {

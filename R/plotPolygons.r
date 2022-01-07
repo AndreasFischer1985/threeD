@@ -1,7 +1,7 @@
 #' Function plotPolygons
 #' 
 #' @export
-plotPolygons <- function (rver, tver, pol, add = F, col1 = "lightgrey", col2 = "black", 
+plotPolygons <- function (tver, pol, add = F, col1 = "lightgrey", col2 = "black", 
     border = "black", culling = "none", lim = NULL, fun = mean) 
 {
     if (is.null(lim)) {

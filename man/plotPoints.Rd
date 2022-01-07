@@ -5,7 +5,6 @@
 \title{Function plotPoints}
 \usage{
 plotPoints(
-  rver,
   tver,
   add = F,
   col1 = "lightgrey",

@@ -13,7 +13,8 @@ scattergram3D(
   thetaZ = 0,
   col1 = "darkgrey",
   col2 = "black",
-  border = NA
+  border = NA,
+  main = "3D Scattergram"
 )
 }
 \description{

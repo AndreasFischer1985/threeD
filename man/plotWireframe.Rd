@@ -5,7 +5,6 @@
 \title{Function plotWireframe}
 \usage{
 plotWireframe(
-  rver,
   tver,
   con,
   add = F,

@@ -10,8 +10,8 @@ interactivePolygonPlot <- function (rver, pol, border = "blue", lim = NULL, cull
         print(paste(tx, ";", ty, ";", tz))
         tver = transformRver(rver, ver, thetaX = tx, thetaY = ty, 
             thetaZ = tz)
-        plotPolygons(rver, tver, pol, border = border, lim = lim, 
-            add = a, culling = culling)
+        plotPolygons(tver, pol, border = border, lim = lim, add = a, 
+            culling = culling)
     }
     p(F)
     thetax = 0

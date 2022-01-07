@@ -1,7 +1,7 @@
 #' Function plotWireframe
 #' 
 #' @export
-plotWireframe <- function (rver, tver, con, add = F, col1 = "lightgrey", col2 = "black", 
+plotWireframe <- function (tver, con, add = F, col1 = "lightgrey", col2 = "black", 
     subset = NULL, lim = NULL, fun = mean) 
 {
     if (is.null(lim)) {

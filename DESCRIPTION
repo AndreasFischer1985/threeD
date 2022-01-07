@@ -1,12 +1,12 @@
 Package: threeD
 Title: Basic functions for plotting and manipulating 3D-Objects based on R's default packages.
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Andreas", "Fischer", email = "andreasfischer1985@web.de", role = c("aut", "cre"))
 Maintainer: 'Andreas Fischer' <andreasfischer1985@web.de>
-Description: The threeD package provides basic functions for plotting and manipulating 3D-Objects. It was written to extend R's default packages without introducing dependencies on other packages.
+Description: The threeD package provides basic functions for parsing, plotting and manipulating 3D-Objects. It was written to extend R's default packages without introducing dependencies on other packages.
 Depends: R (>= 3.0.0)
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.2
 VignetteBuilder: knitr

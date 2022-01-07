@@ -5,7 +5,6 @@
 \title{Function plotPolygons}
 \usage{
 plotPolygons(
-  rver,
   tver,
   pol,
   add = F,
