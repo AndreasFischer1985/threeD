@@ -1,20 +1,24 @@
 #' Function plotPoints
 #' 
 #' @export
-plotPoints <- function (tver, add = F, col1 = "lightgrey", col2 = "black", 
-    subset = NULL, lim = NULL) 
+plotPoints <- function (tver, add = F, col = c("lightgrey", "black"), subset = NULL, 
+    xlim = NULL, ylim = NULL) 
 {
-    if (is.null(lim)) {
+    if (is.null(xlim) | is.null(ylim)) {
         if (add == F) 
             plot(c(min(tver), max(tver)), c(min(tver), max(tver)), 
                 type = "n", axes = F, xlab = NA, ylab = NA)
     }
     else if (add == F) 
-        plot(c(lim[1], lim[2]), c(lim[1], lim[2]), type = "n", 
+        plot(c(xlim[1], xlim[2]), c(ylim[1], ylim[2]), type = "n", 
             axes = F, xlab = NA, ylab = NA)
     z = sapply(seq(1, length(tver), by = 3), function(i) tver[i + 
         2])
-    cols = colorRampPalette(c(col2, col1))(length(levels(as.factor(z))))
+    if (is.null(col)) 
+        col = "black"
+    if (length(col) == 1) 
+        col = rep(col, 2)
+    cols = colorRampPalette(c(col[2], col[1]))(length(levels(as.factor(z))))
     if (!is.null(subset)) {
         if (subset == "front") 
             cols[z <= 0] = NA

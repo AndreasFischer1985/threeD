@@ -8,11 +8,12 @@ plotPolygons(
   tver,
   pol,
   add = F,
-  col1 = "lightgrey",
-  col2 = "black",
+  col = "lightgrey",
+  transparency = 0,
   border = "black",
   culling = "none",
-  lim = NULL,
+  xlim = NULL,
+  ylim = NULL,
   fun = mean
 )
 }

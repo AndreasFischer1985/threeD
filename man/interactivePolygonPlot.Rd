@@ -8,7 +8,8 @@ interactivePolygonPlot(
   rver,
   pol,
   border = "blue",
-  lim = NULL,
+  xlim = NULL,
+  ylim = NULL,
   culling = "back"
 )
 }

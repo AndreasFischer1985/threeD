@@ -4,7 +4,7 @@
 \alias{colourPol}
 \title{Function colourPol}
 \usage{
-colourPol(pol, tver, col1 = "lightgrey", returnDegree = F)
+colourPol(pol, tver, col = "lightgrey", transparency = 0, returnDegree = F)
 }
 \description{
 Function colourPol

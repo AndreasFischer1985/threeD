@@ -1,7 +1,7 @@
 #' Function colourPol
 #' 
 #' @export
-colourPol <- function (pol, tver, col1 = "lightgrey", returnDegree = F) 
+colourPol <- function (pol, tver, col = "lightgrey", transparency = 0, returnDegree = F) 
 {
     d = numeric(0)
     toDegree <- function(rad) rad * 57.2957795130823
@@ -26,9 +26,9 @@ colourPol <- function (pol, tver, col1 = "lightgrey", returnDegree = F)
         return(d)
     d = round(d)
     cols = unlist(lapply(1:length(d), function(i) {
-        apply(col2rgb(col1), 2, function(x) rgb(max(0, min(1, 
+        apply(col2rgb(col), 2, function(x) rgb(max(0, min(1, 
             (x[1] - d[i])/255)), max(0, min(1, (x[2] - d[i])/255)), 
-            max(0, min(1, (x[3] - d[i])/255))))
+            max(0, min(1, (x[3] - d[i])/255)), 1 - transparency))
     }))
     cols
 }

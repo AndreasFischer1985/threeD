@@ -11,8 +11,7 @@ scattergram3D(
   thetaX = 320,
   thetaY = 320,
   thetaZ = 0,
-  col1 = "darkgrey",
-  col2 = "black",
+  col = c("darkgrey", "black"),
   border = NA,
   main = "3D Scattergram"
 )

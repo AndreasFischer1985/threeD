@@ -1,21 +1,22 @@
 #' Function plotPolygons
 #' 
 #' @export
-plotPolygons <- function (tver, pol, add = F, col1 = "lightgrey", col2 = "black", 
-    border = "black", culling = "none", lim = NULL, fun = mean) 
+plotPolygons <- function (tver, pol, add = F, col = "lightgrey", transparency = 0, 
+    border = "black", culling = "none", xlim = NULL, ylim = NULL, 
+    fun = mean) 
 {
-    if (is.null(lim)) {
+    if (is.null(xlim) | is.null(ylim)) {
         if (add == F) 
             plot(c(min(tver), max(tver)), c(min(tver), max(tver)), 
                 type = "n", axes = F, xlab = NA, ylab = NA)
     }
     else if (add == F) 
-        plot(c(lim[1], lim[2]), c(lim[1], lim[2]), type = "n", 
+        plot(c(xlim[1], xlim[2]), c(ylim[1], ylim[2]), type = "n", 
             axes = F, xlab = NA, ylab = NA)
     if (is.null(culling)) 
         culling = "none"
     pol = sortPol(pol, tver, fun)
-    cols = colourPol(pol, tver, col1)
+    cols = colourPol(pol, tver, col, transparency = transparency)
     co = 0
     for (i in seq(1, length(pol), by = 3)) {
         co = co + 1

@@ -7,10 +7,10 @@
 plotPoints(
   tver,
   add = F,
-  col1 = "lightgrey",
-  col2 = "black",
+  col = c("lightgrey", "black"),
   subset = NULL,
-  lim = NULL
+  xlim = NULL,
+  ylim = NULL
 )
 }
 \description{

@@ -1,17 +1,20 @@
 #' Function interactivePolygonPlot
 #' 
 #' @export
-interactivePolygonPlot <- function (rver, pol, border = "blue", lim = NULL, culling = "back") 
+interactivePolygonPlot <- function (rver, pol, border = "blue", xlim = NULL, ylim = NULL, 
+    culling = "back") 
 {
     dev.new()
-    if (is.null(lim)) 
-        lim = c(min(tver), max(tver))
+    if (is.null(xlim)) 
+        xlim = c(min(tver), max(tver))
+    if (is.null(ylim)) 
+        ylim = c(min(tver), max(tver))
     p = function(a = F, tx = 0, ty = 0, tz = 0) {
         print(paste(tx, ";", ty, ";", tz))
         tver = transformRver(rver, ver, thetaX = tx, thetaY = ty, 
             thetaZ = tz)
-        plotPolygons(tver, pol, border = border, lim = lim, add = a, 
-            culling = culling)
+        plotPolygons(tver, pol, border = border, xlim = xlim, 
+            ylim = ylim, add = a, culling = culling)
     }
     p(F)
     thetax = 0
