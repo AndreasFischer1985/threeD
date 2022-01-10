@@ -5,9 +5,10 @@
 \title{Function barplot3D}
 \usage{
 barplot3D(
-  x,
+  x = NULL,
   col = NULL,
   transparency = 0.2,
+  border = NA,
   xlim = NULL,
   ylim = NULL,
   main = "3D Barplot",

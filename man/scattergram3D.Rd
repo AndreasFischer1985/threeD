@@ -5,13 +5,14 @@
 \title{Function scattergram3D}
 \usage{
 scattergram3D(
-  x,
-  y,
-  z,
+  x = NULL,
+  y = NULL,
+  z = NULL,
   thetaX = 320,
   thetaY = 320,
   thetaZ = 0,
   col = c("darkgrey", "black"),
+  add.polygon = F,
   border = NA,
   main = "3D Scattergram"
 )

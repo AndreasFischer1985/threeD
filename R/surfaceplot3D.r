@@ -2,9 +2,9 @@
 #' 
 #' @export
 surfaceplot3D <- function (x = -10:10, y = -10:10, fun = NULL, dim = c(10, 10), 
-    border = NA, col = rgb(0, 0, 1), transparency = 0.1, thetaX = 10, 
-    thetaY = 60, thetaZ = 10, culling = "none", add.wireframe = T, 
-    add.polygons = T, ...) 
+    col = rgb(0, 0, 1), border = NA, main = "3D Surfaceplot", 
+    transparency = 0.1, thetaX = 10, thetaY = 60, thetaZ = 10, 
+    culling = "none", add.wireframe = T, add.polygons = T, ...) 
 {
     if (is.null(fun)) 
         fun = function(x, y) x * y
@@ -51,5 +51,7 @@ surfaceplot3D <- function (x = -10:10, y = -10:10, fun = NULL, dim = c(10, 10),
     if (add.wireframe) 
         plotWireframe(tver, con, add = T, col = c(col, "black"))
     plotWireframe(tver2, form("cube")$con, add = T, subset = "front")
-    invisible(list(ver = ver, pol = pol, con = con))
+    if (!is.null(main)) 
+        title(main)
+    invisible(list(ver = ver, tver = tver, pol = pol, con = con))
 }

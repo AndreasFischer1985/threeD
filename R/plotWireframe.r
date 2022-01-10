@@ -1,8 +1,9 @@
 #' Function plotWireframe
 #' 
 #' @export
-plotWireframe <- function (tver, con, add = F, col = c("lightgrey", "black"), 
-    subset = NULL, xlim = NULL, ylim = NULL, fun = mean) 
+plotWireframe <- function (tver = form("cube")$ver, con = form("cube")$con, add = F, 
+    col = c("lightgrey", "black"), subset = NULL, xlim = NULL, 
+    ylim = NULL, fun = mean) 
 {
     if (is.null(xlim) | is.null(ylim)) {
         if (add == F) 

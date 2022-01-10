@@ -1,8 +1,8 @@
 #' Function interactivePolygonPlot
 #' 
 #' @export
-interactivePolygonPlot <- function (rver, pol, border = "blue", xlim = NULL, ylim = NULL, 
-    culling = "back") 
+interactivePolygonPlot <- function (rver = unitRver(), pol = form("cube")$pol, border = "blue", 
+    xlim = NULL, ylim = NULL, culling = "back") 
 {
     dev.new()
     if (is.null(xlim)) 

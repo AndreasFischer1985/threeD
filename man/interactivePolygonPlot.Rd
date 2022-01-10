@@ -5,8 +5,8 @@
 \title{Function interactivePolygonPlot}
 \usage{
 interactivePolygonPlot(
-  rver,
-  pol,
+  rver = unitRver(),
+  pol = form("cube")$pol,
   border = "blue",
   xlim = NULL,
   ylim = NULL,

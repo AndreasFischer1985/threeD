@@ -1,9 +1,9 @@
 #' Function plotPolygons
 #' 
 #' @export
-plotPolygons <- function (tver, pol, add = F, col = "lightgrey", transparency = 0, 
-    border = "black", culling = "none", xlim = NULL, ylim = NULL, 
-    fun = mean) 
+plotPolygons <- function (tver = form("cube")$ver, pol = form("cube")$pol, add = F, 
+    col = "lightgrey", transparency = 0, border = "black", culling = "none", 
+    xlim = NULL, ylim = NULL, fun = mean) 
 {
     if (is.null(xlim) | is.null(ylim)) {
         if (add == F) 
@@ -17,6 +17,12 @@ plotPolygons <- function (tver, pol, add = F, col = "lightgrey", transparency = 
         culling = "none"
     pol = sortPol(pol, tver, fun)
     cols = colourPol(pol, tver, col, transparency = transparency)
+    borders = NULL
+    if (is.null(border)) 
+        borders = cols
+    if (length(borders) != length(cols)) 
+        borders = rep(border[1], length(cols))
+    else borders = cols
     co = 0
     for (i in seq(1, length(pol), by = 3)) {
         co = co + 1
@@ -33,6 +39,6 @@ plotPolygons <- function (tver, pol, add = F, col = "lightgrey", transparency = 
             polygon(x = c(tver[pol[i] * 3 - 2], tver[pol[i + 
                 1] * 3 - 2], tver[pol[i + 2] * 3 - 2]), y = c(tver[pol[i] * 
                 3 - 1], tver[pol[i + 1] * 3 - 1], tver[pol[i + 
-                2] * 3 - 1]), col = cols[co], border = border)
+                2] * 3 - 1]), col = cols[co], border = borders[co])
     }
 }

@@ -1,10 +1,12 @@
 #' Function barplot3D
 #' 
 #' @export
-barplot3D <- function (x, col = NULL, transparency = 0.2, xlim = NULL, ylim = NULL, 
-    main = "3D Barplot", thetaX = 10, thetaY = 10, thetaZ = 0, 
-    add.numbers = F, txt.srt = 0, txt.pos = 3) 
+barplot3D <- function (x = NULL, col = NULL, transparency = 0.2, border = NA, 
+    xlim = NULL, ylim = NULL, main = "3D Barplot", thetaX = 10, 
+    thetaY = 10, thetaZ = 0, add.numbers = F, txt.srt = 0, txt.pos = 3) 
 {
+    if (is.null(x)) 
+        x = cbind(c(1, 2, 3), c(2, 2, 2), c(3, 2, 1))
     x = cbind(x)
     bar = list(ver = c(-1, 0, -1, +1, 0, -1, +1, 0, +1, -1, 0, 
         +1, -1, +2, -1, +1, +2, -1, +1, +2, +1, -1, +2, +1), 
@@ -49,7 +51,7 @@ barplot3D <- function (x, col = NULL, transparency = 0.2, xlim = NULL, ylim = NU
             d1 * dim(x)[2], max(tver2[seq(1, length(tver2), by = 3) + 
             1]) + d2 * dim(x)[1])
     plotPolygons(tver, pol, col = NA, transparency = transparency, 
-        border = NA, xlim = xlim, ylim = ylim, add = F, culling = "back")
+        border = border, xlim = xlim, ylim = ylim, add = F, culling = "back")
     if (is.null(col)) 
         col = rainbow(dim(x)[1])
     k = 1
@@ -67,7 +69,8 @@ barplot3D <- function (x, col = NULL, transparency = 0.2, xlim = NULL, ylim = NU
         tver2 = transformRver(rver, ver2, thetaX = thetaX, thetaY = thetaY, 
             thetaZ = thetaZ)
         plotPolygons(tver2, pol, col = col[i], transparency = transparency, 
-            border = NA, xlim = xlim, ylim = ylim, add = T, culling = "back")
+            border = border, xlim = xlim, ylim = ylim, add = T, 
+            culling = "back")
         k = k + 1
         x1 = c(x1, mean(tver2[seq(1, length(tver), by = 3) + 
             0][order(tver2[seq(1, length(tver), by = 3) + 1], 

@@ -5,7 +5,7 @@
 \title{Function plotPoints}
 \usage{
 plotPoints(
-  tver,
+  tver = form("cube")$ver,
   add = F,
   col = c("lightgrey", "black"),
   subset = NULL,

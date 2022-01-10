@@ -1,8 +1,8 @@
 #' Function plotPoints
 #' 
 #' @export
-plotPoints <- function (tver, add = F, col = c("lightgrey", "black"), subset = NULL, 
-    xlim = NULL, ylim = NULL) 
+plotPoints <- function (tver = form("cube")$ver, add = F, col = c("lightgrey", 
+    "black"), subset = NULL, xlim = NULL, ylim = NULL) 
 {
     if (is.null(xlim) | is.null(ylim)) {
         if (add == F) 

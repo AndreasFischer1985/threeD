@@ -5,8 +5,8 @@
 \title{Function plotWireframe}
 \usage{
 plotWireframe(
-  tver,
-  con,
+  tver = form("cube")$ver,
+  con = form("cube")$con,
   add = F,
   col = c("lightgrey", "black"),
   subset = NULL,

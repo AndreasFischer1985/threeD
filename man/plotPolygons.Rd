@@ -5,8 +5,8 @@
 \title{Function plotPolygons}
 \usage{
 plotPolygons(
-  tver,
-  pol,
+  tver = form("cube")$ver,
+  pol = form("cube")$pol,
   add = F,
   col = "lightgrey",
   transparency = 0,
