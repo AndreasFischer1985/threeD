@@ -6,6 +6,7 @@
 \usage{
 interactivePolygonPlot(
   rver = unitRver(),
+  ver = form("cube")$ver,
   pol = form("cube")$pol,
   border = "blue",
   xlim = NULL,
