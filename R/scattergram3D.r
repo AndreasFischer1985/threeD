@@ -30,7 +30,7 @@ scattergram3D <- function (x = NULL, y = NULL, z = NULL, thetaX = 320, thetaY = 
     if (length(col) == 1) 
         col = rep(col, 2)
     plotWireframe(tver, con, add = F, subset = "back")
-    plotPoints(tver2, add = T, col = col)
+    plotPoints(sortVer(tver2), add = T, col = col)
     plotWireframe(tver, con, add = T, subset = "front")
     if (!is.null(main)) 
         title(main)
