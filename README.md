@@ -1,5 +1,5 @@
 # threeD
-The threeD package provides basic functions for parsing, plotting and manipulating 3D-Objects. It was written to extend R's default packages without introducing dependencies on other 
+The threeD package provides basic functions for parsing, plotting and manipulating 3D-Objects. It was written to extend R's default packages without introducing dependencies on other packages.
 
 You may install the package using the following commands in R:
 
